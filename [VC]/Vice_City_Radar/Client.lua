@@ -254,13 +254,13 @@ addEventHandler('onClientRender', root,
 										setElementData(localPlayer,"SelectedRace",getElementData(v,"RaceName"))
 							setElementData(localPlayer,"RaceElement",v)
 					end
-						dxDrawImage(X - 20, Y - 20, 40, 40, 'Images/53.png',0,0,0,tocolor(255,255,255,240) )
+						dxDrawImage(X - 20, Y - 20, 40, 40, 'images/53.png',0,0,0,tocolor(255,255,255,240) )
 							Hover = getElementData(v,"RaceName")
 						else
-							dxDrawImage(X - 10, Y -10, 20, 20, 'Images/53.png',0,0,0,tocolor(255,255,255,240) )
+							dxDrawImage(X - 10, Y -10, 20, 20, 'images/53.png',0,0,0,tocolor(255,255,255,240) )
 						end
 					else
-							dxDrawImage(X - 10, Y -10, 20, 20, 'Images/53.png',0,0,0,tocolor(255,255,255,240) )
+							dxDrawImage(X - 10, Y -10, 20, 20, 'images/53.png',0,0,0,tocolor(255,255,255,240) )
 						end
 					end
 				end
@@ -284,12 +284,12 @@ addEventHandler('onClientRender', root,
 							setElementData(localPlayer,"SelectedWarp",getElementData(v,"WarpName"))
 						setElementData(localPlayer,"WarpElement",v)
 					end
-						dxDrawImage(X - 20, Y - 20, 40, 40, 'Images/56.png',0,0,0,tocolor(255,255,0,Alpha) )
+						dxDrawImage(X - 20, Y - 20, 40, 40, 'images/56.png',0,0,0,tocolor(255,255,0,Alpha) )
 						else
-							dxDrawImage(X - 10, Y -10, 20, 20, 'Images/56.png',0,0,0,tocolor(255,255,0,Alpha) )
+							dxDrawImage(X - 10, Y -10, 20, 20, 'images/56.png',0,0,0,tocolor(255,255,0,Alpha) )
 						end
 					else
-							dxDrawImage(X - 10, Y -10, 20, 20, 'Images/56.png',0,0,0,tocolor(255,255,0,Alpha) )
+							dxDrawImage(X - 10, Y -10, 20, 20, 'images/56.png',0,0,0,tocolor(255,255,0,Alpha) )
 						end
 					end
 				end
@@ -324,7 +324,7 @@ addEventHandler('onClientRender', root,
 						centerY = math.max(topFrame, math.min(bottomFrame, blipY));
 						end
 
-						dxDrawImage(centerX - (blipSettings['size'] / 2), centerY - (blipSettings['size'] / 2), blipSettings['size'], blipSettings['size'], 'Images/' .. blipSettings['icon'] .. '.png', 0, 0, 0, tocolor(blipSettings['color'][1], blipSettings['color'][2], blipSettings['color'][3], blipSettings['color'][4]));
+						dxDrawImage(centerX - (blipSettings['size'] / 2), centerY - (blipSettings['size'] / 2), blipSettings['size'], blipSettings['size'], 'images/' .. blipSettings['icon'] .. '.png', 0, 0, 0, tocolor(blipSettings['color'][1], blipSettings['color'][2], blipSettings['color'][3], blipSettings['color'][4]));
 					end
 				end
 				end
@@ -348,7 +348,7 @@ addEventHandler('onClientRender', root,
 
 						if (blipX >= Bigmap.PosX and blipX <= Bigmap.PosX + Bigmap.Width) then
 							if (blipY >= Bigmap.PosY and blipY <= Bigmap.PosY + Bigmap.Height) then
-								dxDrawImage(blipX - (blipSettings['size'] / 2), blipY - (blipSettings['size'] / 2), blipSettings['size'], blipSettings['size'], 'Images/2.png', -getPedRotation(player), 0, 0, tocolor(blipSettings['color'][1], blipSettings['color'][2], blipSettings['color'][3], blipSettings['color'][4]));
+								dxDrawImage(blipX - (blipSettings['size'] / 2), blipY - (blipSettings['size'] / 2), blipSettings['size'], blipSettings['size'], 'images/2.png', -getPedRotation(player), 0, 0, tocolor(blipSettings['color'][1], blipSettings['color'][2], blipSettings['color'][3], blipSettings['color'][4]));
 							end
 						end
 					end
@@ -362,7 +362,7 @@ addEventHandler('onClientRender', root,
 
 				if (blipX >= Bigmap.PosX and blipX <= Bigmap.PosX + Bigmap.Width) then
 					if (blipY >= Bigmap.PosY and blipY <= Bigmap.PosY + Bigmap.Height) then
-						dxDrawImage(blipX - 10, blipY - 10, 20, 20, 'Images/arrow.png', 360 - playerRotation);
+						dxDrawImage(blipX - 10, blipY - 10, 20, 20, 'images/arrow.png', 360 - playerRotation);
 					end
 				end
 
@@ -501,7 +501,7 @@ addEventHandler('onClientRender', root,
 						end
 
 						dxSetBlendMode('modulate_add');
-						dxDrawImage(blipX, blipY, blipSettings['size'], blipSettings['size'], 'Images/' .. blipSettings['icon'] .. '.png', 0, 0, 0, tocolor(blipSettings['color'][1], blipSettings['color'][2], blipSettings['color'][3], blipSettings['color'][4]), false);
+						dxDrawImage(blipX, blipY, blipSettings['size'], blipSettings['size'], 'images/' .. blipSettings['icon'] .. '.png', 0, 0, 0, tocolor(blipSettings['color'][1], blipSettings['color'][2], blipSettings['color'][3], blipSettings['color'][4]), false);
 						dxSetBlendMode('blend');
 					end
 				end
@@ -521,7 +521,7 @@ addEventHandler('onClientRender', root,
 						local playerR, playerG, playerB = getPlayerNametagColor(player);
 
 						dxSetBlendMode('modulate_add');
-						dxDrawImage(otherPlayerX, otherPlayerY, 20, 20, 'Images/2.png',math.deg(-pRotation)-getPedRotation(player), 0, 0, tocolor(playerR, playerG, playerB, 255), false);
+						dxDrawImage(otherPlayerX, otherPlayerY, 20, 20, 'images/2.png',math.deg(-pRotation)-getPedRotation(player), 0, 0, tocolor(playerR, playerG, playerB, 255), false);
 						dxSetBlendMode('blend');
 					end
 				end
@@ -532,7 +532,7 @@ addEventHandler('onClientRender', root,
 				dxDrawImageSection(Minimap.PosX, Minimap.PosY, Minimap.Width, Minimap.Height, Minimap.NormalTargetSize / 2 + (Minimap.BiggerTargetSize / 2) - (Minimap.Width / 2), Minimap.NormalTargetSize / 2 + (Minimap.BiggerTargetSize / 2) - (Minimap.Height / 2), Minimap.Width, Minimap.Height, Minimap.RenderTarget, 0, -90, 0, tocolor(255, 255, 255, 255));
 
 				--> Local player
-				dxDrawImage((Minimap.PosX + (Minimap.Width / 2)) - 10, (Minimap.PosY + (Minimap.Height / 2)) - 10, 20, 20, 'Images/arrow.png', math.deg(-pRotation) - playerRotation);
+				dxDrawImage((Minimap.PosX + (Minimap.Width / 2)) - 10, (Minimap.PosY + (Minimap.Height / 2)) - 10, 20, 20, 'images/arrow.png', math.deg(-pRotation) - playerRotation);
 
 				--> GPS
 				--dxDrawRectangle(Minimap.PosX, Minimap.PosY + Minimap.Height - 25, Minimap.Width, 25, tocolor(0, 0, 0, 150));
